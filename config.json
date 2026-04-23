@@ -1,0 +1,70 @@
+{
+  "productName": "Descript",
+  "seoDescription": "Descript review for creators and teams: AI video editing, podcast workflows, instant transcription, and collaboration in one fast cloud platform.",
+  "affiliateLink": "#",
+  "hero": {
+    "badge": "Top AI Editing Platform",
+    "headline": "Edit Video & Podcasts As Fast As You Can Type",
+    "subheadline": "Descript gives creators and teams instant access to AI-powered editing, clean audio tools, and publishing workflows without a complex post-production stack.",
+    "priceLabel": "Starting Plan",
+    "priceValue": "$0",
+    "ctaText": "Get Started Free",
+    "ctaSubtext": "Instant access, no credit card required"
+  },
+  "gallery": [
+    "AI Timeline Workspace",
+    "One-Click Captions",
+    "Studio Sound Cleanup",
+    "Brand-Ready Exports"
+  ],
+  "features": [
+    {
+      "icon": "🧠",
+      "title": "AI Co-Editor",
+      "description": "Use prompts to generate cuts, tighten pacing, and produce polished edits in minutes."
+    },
+    {
+      "icon": "✍️",
+      "title": "Text-Based Editing",
+      "description": "Edit spoken content by editing text, ideal for webinars, podcasts, and training videos."
+    },
+    {
+      "icon": "🎙️",
+      "title": "Studio-Quality Audio",
+      "description": "Remove noise, filler words, and room echo with AI tools built for clear voice delivery."
+    },
+    {
+      "icon": "⚙️",
+      "title": "Built-In Workflow Suite",
+      "description": "From transcription and captions to versioning and exports, everything stays in one workspace."
+    }
+  ],
+  "benefits": [
+    "Instant access from any browser for remote teams",
+    "Publish-ready outputs for YouTube, podcasts, and social channels",
+    "Faster content turnaround with fewer handoffs",
+    "Lower production overhead for growing businesses"
+  ],
+  "review": {
+    "ratingValue": 4.9,
+    "bestRating": 5,
+    "headline": "Professional Review",
+    "intro": "After extensive testing across course creation, social clips, and interview podcasts, Descript stands out as one of the most complete digital production platforms for modern content teams.",
+    "paragraphs": [
+      "The biggest conversion advantage is speed: teams can go from raw recording to distribution-ready assets without switching between fragmented tools.",
+      "Features such as transcription, filler-word removal, and clean caption workflows reduce editing friction and help non-specialists publish at a professional standard.",
+      "For digital-first brands, educators, and creators, Descript delivers a high ROI by compressing production cycles while maintaining quality."
+    ],
+    "pros": [
+      "Fast onboarding and immediate productivity for new users",
+      "AI tools save measurable time on every production cycle",
+      "Excellent fit for video, podcast, and repurposed social content",
+      "Scales from solo creators to distributed teams"
+    ],
+    "pointsToConsider": [
+      "Power users may still pair it with niche tools for advanced motion graphics",
+      "Cloud-based workflow depends on stable internet for best experience",
+      "Usage limits vary by plan, so selecting the right tier matters"
+    ]
+  }
+}
