@@ -1,0 +1,44 @@
+---
+interface Props {
+  hero: {
+    badge: string;
+    headline: string;
+    subheadline: string;
+    ctaText: string;
+    ctaSubtext: string;
+  };
+  affiliateLink: string;
+}
+
+const { hero, affiliateLink } = Astro.props;
+---
+
+<section class="relative overflow-hidden">
+  <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_15%,rgba(79,70,229,0.3),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(168,85,247,0.26),transparent_32%)]"></div>
+  <div class="container mx-auto px-6 pb-24 pt-20 md:px-8 md:pb-32 md:pt-28">
+    <div class="mx-auto max-w-5xl text-center">
+      <span class="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-indigo-200">
+        {hero.badge}
+      </span>
+      <h1 class="mt-8 text-5xl font-black leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl">
+        {hero.headline}
+      </h1>
+      <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-300 md:text-xl">
+        {hero.subheadline}
+      </p>
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <a
+          href={affiliateLink}
+          target="_blank"
+          rel="noopener sponsored"
+          class="rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-8 py-4 text-base font-semibold text-white shadow-[0_0_40px_rgba(99,102,241,0.35)] transition hover:translate-y-[-1px] hover:shadow-[0_0_56px_rgba(99,102,241,0.55)] hover:from-indigo-400 hover:to-violet-400"
+        >
+          {hero.ctaText}
+        </a>
+        <span class="rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-slate-300">
+          {hero.ctaSubtext}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+---
+interface Props {
+  hero: {
+    priceLabel: string;
+    priceValue: string;
+  };
+  benefits: string[];
+  review: {
+    ratingValue: number;
+    bestRating: number;
+    headline: string;
+    intro: string;
+    paragraphs: string[];
+    pros: string[];
+    pointsToConsider: string[];
+  };
+  affiliateLink: string;
+}
+
+const { hero, benefits, review, affiliateLink } = Astro.props;
+---
+
+<section id="pricing" class="container mx-auto px-6 py-24 md:px-8 md:py-32">
+  <div class="grid gap-8 lg:grid-cols-3">
+    <article class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-lg lg:col-span-2">
+      <h2 class="text-5xl font-black tracking-tight text-white md:text-6xl">Instant access benefits</h2>
+      <div class="mt-7 grid gap-4 md:grid-cols-2">
+        {
+          benefits.map((benefit) => (
+            <div class="rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-slate-200">{benefit}</div>
+          ))
+        }
+      </div>
+    </article>
+
+    <article class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-lg">
+      <p class="text-sm uppercase tracking-[0.16em] text-slate-300">{hero.priceLabel}</p>
+      <p class="mt-2 text-6xl font-black tracking-tight text-white">{hero.priceValue}</p>
+      <p class="mt-4 leading-relaxed text-slate-300">Review score: {review.ratingValue}/{review.bestRating}</p>
+      <a
+        href={affiliateLink}
+        target="_blank"
+        rel="noopener sponsored"
+        class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3 font-semibold text-white transition hover:from-indigo-400 hover:to-violet-400"
+      >
+        Get Started
+      </a>
+    </article>
+  </div>
+</section>
+
+<section id="review" class="container mx-auto px-6 pb-32 md:px-8">
+  <div class="grid gap-8 lg:grid-cols-3">
+    <article class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-lg lg:col-span-2">
+      <h2 class="text-5xl font-black tracking-tight text-white md:text-6xl">{review.headline}</h2>
+      <p class="mt-5 text-slate-200">{review.intro}</p>
+      {review.paragraphs.map((paragraph) => <p class="mt-4 text-slate-300">{paragraph}</p>)}
+    </article>
+    <div class="space-y-8">
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur-lg">
+        <h3 class="text-2xl font-bold text-white">Pros</h3>
+        <ul class="mt-4 space-y-3">
+          {review.pros.map((item) => <li class="text-slate-200">- {item}</li>)}
+        </ul>
+      </article>
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur-lg">
+        <h3 class="text-2xl font-bold text-white">Points to Consider</h3>
+        <ul class="mt-4 space-y-3">
+          {review.pointsToConsider.map((item) => <li class="text-slate-300">- {item}</li>)}
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>

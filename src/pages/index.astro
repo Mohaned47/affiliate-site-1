@@ -1,0 +1,53 @@
+---
+import pageConfig from "../../config.json";
+import "../styles/global.css";
+import DescriptLanding from "../components/DescriptLanding";
+
+const { productName, seoDescription, affiliateLink, hero, features, review } = pageConfig;
+const reviewSchema = {
+	"@context": "https://schema.org",
+	"@type": "Review",
+	itemReviewed: {
+		"@type": "Product",
+		name: productName
+	},
+	reviewRating: {
+		"@type": "Rating",
+		ratingValue: review.ratingValue,
+		bestRating: review.bestRating
+	},
+	name: `Review of ${productName}`,
+	reviewBody: review.intro
+};
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{productName} | AI Video & Podcast Editor Review</title>
+		<meta name="description" content={`${productName} - ${seoDescription}`} />
+		<meta name="generator" content={Astro.generator} />
+		<meta property="og:title" content={`${productName} - Instant AI Editing for Modern Teams`} />
+		<meta property="og:description" content={seoDescription} />
+		<meta property="og:type" content="website" />
+		<script type="application/ld+json" set:html={JSON.stringify(reviewSchema)}></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="font-sans min-h-screen bg-[#030303] text-slate-100 antialiased">
+		<div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_15%_15%,rgba(99,102,241,0.2),transparent_36%),radial-gradient(circle_at_86%_8%,rgba(168,85,247,0.16),transparent_34%)]"></div>
+		<DescriptLanding
+			client:load
+			productName={productName}
+			affiliateLink={affiliateLink}
+			hero={hero}
+			features={features}
+		/>
+	</body>
+</html>
